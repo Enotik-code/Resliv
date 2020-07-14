@@ -1,7 +1,0 @@
-payroll\MessageNotFoundException.class
-payroll\Message.class
-payroll\PayrollApplication.class
-payroll\MessageController.class
-payroll\MessageNotFoundAdvice.class
-payroll\LoadDatabase.class
-payroll\MessageRepository.class

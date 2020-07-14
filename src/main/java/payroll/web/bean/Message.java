@@ -1,4 +1,4 @@
-package payroll;
+package payroll.web.bean;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -16,8 +16,7 @@ public class Message implements Serializable {
 
 	Message() {}
 
-	Message(String name, String description) {
-
+	public Message(String name, String description) {
 		this.name = name;
 		this.description = description;
 	}
@@ -67,4 +66,5 @@ public class Message implements Serializable {
 	public String toString() {
 		return "Message{" + "id=" + this.id + ", name='" + this.name + '\'' + ", description='" + this.description + '\'' + '}';
 	}
+
 }

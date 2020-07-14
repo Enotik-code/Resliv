@@ -1,4 +1,4 @@
-package payroll;
+package payroll.web.controller;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
@@ -15,6 +15,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import payroll.web.exception.MessageNotFoundException;
+import payroll.web.dao.repository.MessageRepository;
+import payroll.web.dao.service.MessageService;
+import payroll.web.bean.Message;
 
 @RestController
 public class MessageController {
@@ -74,7 +78,7 @@ public class MessageController {
 
 	@GetMapping
 	public String allTourismMessages(){
-		return messageService.getMessageByCityName("Минск").toString();
+		return messageService.list().toString();
 	}
 
 }

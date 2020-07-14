@@ -1,11 +1,11 @@
-package payroll;
+package payroll.web.dao.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+import payroll.web.bean.Message;
 
-import java.util.List;
 
 @Repository
 public interface MessageRepository extends JpaRepository<Message, Long> {
-    List<Message> getMessageByName(String name);
+    Message getMessageByName(String name);
 }

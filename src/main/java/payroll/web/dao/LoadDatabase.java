@@ -1,10 +1,12 @@
-package payroll;
+package payroll.web.dao;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import payroll.web.dao.repository.MessageRepository;
+import payroll.web.bean.Message;
 
 @Configuration
 public class LoadDatabase {
@@ -13,7 +15,6 @@ public class LoadDatabase {
 
 	@Bean
 	CommandLineRunner initDatabase(MessageRepository repository) {
-
 		return args -> {
 			log.info("Preloading " + repository.save(new Message("Minsk", "Nice")));
 			log.info("Preloading " + repository.save(new Message("Moscow", "Very nice")));
