@@ -1,19 +1,14 @@
-#ReslivInterview 
+# ReslivInterview 
 
 Для запуска приложения запустим класс PayrollApplication.
 При его инициализацци наш телеграм бот и веб-сервисы начинают свою работу.
-
-Токен: 1056753107:AAG-Sx6ZOBozVoD8LpvW2Y2XkDcjJbd9I6g
-Имя:ReslivInterviewBot
-
+## Токен: 1056753107:AAG-Sx6ZOBozVoD8LpvW2Y2XkDcjJbd9I6g
+## Имя:ReslivInterviewBot
 Телеграмм бот запускается сообщением /start  и после чего мы можем использовать его в качестве туристического путеводителя. Так же предусмотрен вариант когда город отсуствует в базе данных, в таком случае будет выведено сообщение - "К сожалению, у нас нет информации для этого города."
 Когда город есть в нашей базе данных мы получаем сообщение с рекомендациями:
-
--Kiev
--Bright, beautiful and night city
-
+### -Kiev
+### -Bright, beautiful and night city
 Таким образом телеграм бот полностью выполняет поставленную задача. 
-
 Далее перейдем к веб части нашего проекта.
 
 Для удобства просмотра сообщений есть домашняя страница.
@@ -82,8 +77,11 @@ curl -v http://localhost:8080/messages/1
 
 ///Не готово!
 Для измения информации о сообщении введем команду
+```
 curl -v -X PUT localhost:8080/messages/{ID изменяемого сообщения} -H 'Content-Type:application/json' -d '{"name": "Samwise Gamgee", "role": "ring bearer"}'
-
+```
 
 Для добавления информации введем команду
+```
 curl -v -X POST localhost:8080/messages -H 'Content-Type:application/json' -d '{"id": "{ID сообщения}", "name": "{Город}", "description": "{Описание города}"}'
+```
