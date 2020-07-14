@@ -28,9 +28,6 @@ public class RestMessageController {
 	@Autowired
 	private final MessageRepository repository;
 
-	@Autowired
-	private MessageService messageService;
-
 	RestMessageController(MessageRepository repository) {
 		this.repository = repository;
 	}
@@ -46,8 +43,8 @@ public class RestMessageController {
 	}
 
 	@PostMapping("/messages")
-    public Message newMessage(@RequestBody Message newMessage) {
-		return repository.save(newMessage);
+    public Message newMessage(@RequestBody Message message) {
+		return repository.save(message);
 	}
 
 	@GetMapping("/messages/{id}")
@@ -61,7 +58,7 @@ public class RestMessageController {
 
 	@PutMapping("/messages/{id}")
     public Message replaceMessage(@RequestBody Message message, @PathVariable Long id) {
-		return repository.findById(id) //
+		return repository.findById(id)
 				.map(mes -> {
 					mes.setName(message.getName());
 					mes.setDescription(message.getDescription());
@@ -73,7 +70,7 @@ public class RestMessageController {
 				});
 	}
 
-	@DeleteMapping("/messagess/{id}")
+	@DeleteMapping("/messages/{id}")
 	public void deleteMessage(@PathVariable Long id) {
 		repository.deleteById(id);
 	}
