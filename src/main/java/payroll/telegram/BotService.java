@@ -25,11 +25,15 @@ public class BotService {
         try {
             SendMessage sendMessage = new SendMessage();
             sendMessage.setChatId(message.getChatId().toString());
-            sendMessage.setText((text.equals("/start")) ? getAnswerIfStartMessage() : messageService.getAnswer(text));
+            sendMessage.setText(getAnswer(text));
             bot.execute(sendMessage);
         } catch (TelegramApiException e) {
             log.error(e.toString());
         }
+    }
+
+    public String getAnswer(String text){
+        return (text.equals("/start")) ? getAnswerIfStartMessage() : messageService.getAnswer(text);
     }
 
     public String getAnswerIfStartMessage() {
