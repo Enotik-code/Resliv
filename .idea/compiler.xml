@@ -9,8 +9,8 @@
         <module name="rest" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="rest" target="1.8" />
+    <bytecodeTargetLevel target="8">
+      <module name="rest" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

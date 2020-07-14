@@ -1,12 +1,11 @@
 package payroll.web.dao.service;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import payroll.strings.StringFile;
 import payroll.web.bean.Message;
-import payroll.web.dao.LoadDatabase;
 import payroll.web.dao.repository.MessageRepository;
 
 import java.util.List;
@@ -17,7 +16,7 @@ public class MessageService {
     @Autowired
     private MessageRepository messageRepository;
 
-    private static final Logger log = LoggerFactory.getLogger(LoadDatabase.class);
+    private static final Logger log = Logger.getLogger(MessageService.class);
 
     public List<Message> list() {
         return messageRepository.findAll();
@@ -32,6 +31,5 @@ public class MessageService {
         }
         return (answer != null) ? answer: StringFile.NO_INFORMATION;
     }
-
 
 }

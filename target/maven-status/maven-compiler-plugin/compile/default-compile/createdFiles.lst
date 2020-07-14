@@ -1,0 +1,7 @@
+payroll\web\exception\MessageNotFoundException.class
+payroll\telegram\BotService.class
+payroll\telegram\Bot.class
+payroll\web\dao\service\MessageService.class
+payroll\web\dao\repository\MessageRepository.class
+payroll\strings\StringFile.class
+payroll\web\bean\Message.class
