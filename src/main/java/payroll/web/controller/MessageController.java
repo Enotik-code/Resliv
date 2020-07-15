@@ -23,6 +23,4 @@ public class MessageController {
         modelAndView.addObject("messageList", messageService.list());
         return modelAndView;
     }
-
-
 }

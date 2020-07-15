@@ -16,11 +16,13 @@
     </tr>
     </thead>
 <tbody>
+
 <tr th:each="message : ${messageList}">
     <td th:text="${message.id}">Id</td>
     <td th:text="${message.name}">City</td>
     <td th:text="${message.description}">Description</td>
 </tr>
+
 </tbody>
 </table>
 </body>
