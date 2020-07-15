@@ -77,7 +77,7 @@ curl -v http://localhost:8080/messages/1
 
 Для измения информации о сообщении введем команду
 ```
-curl -v -X PUT localhost:8080/messages/{ID изменяемого сообщения} -H 'Content-Type:application/json' -d '{"name": "Samwise Gamgee", "role": "ring bearer"}'
+curl -v -X PUT localhost:8080/messages/{ID изменяемого сообщения} -H 'Content-Type:application/json' -d '{"id" : "{Новый ID}","name": "{Город}", "description": "{Описание города}"}'
 ```
 
 Для добавления информации введем команду
