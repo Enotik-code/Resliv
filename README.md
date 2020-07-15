@@ -75,7 +75,6 @@ curl -v http://localhost:8080/messages/1
 {"id":1,"name":"Minsk","description":"Go to the national library and eat potato pancakes","_links":{"self":{"href":"http://localhost:8080/messages/1"},"messagess":{"href":"http://localhost:8080/messages"}}}
 ```
 
-///Не готово!
 Для измения информации о сообщении введем команду
 ```
 curl -v -X PUT localhost:8080/messages/{ID изменяемого сообщения} -H 'Content-Type:application/json' -d '{"name": "Samwise Gamgee", "role": "ring bearer"}'
