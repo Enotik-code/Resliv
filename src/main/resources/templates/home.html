@@ -13,8 +13,6 @@
         <th scope="col">#</th>
         <th scope="col">City</th>
         <th scope="col">Description</th>
-        <th scope="col">Delete</th>
-        <th scope="col">Replase</th>
     </tr>
     </thead>
 <tbody>
@@ -22,16 +20,6 @@
     <td th:text="${message.id}">Id</td>
     <td th:text="${message.name}">City</td>
     <td th:text="${message.description}">Description</td>
-    <td>
-        <form th:action="@{'/messages/' + ${message.id}}" th:object="${message}" method="delete">
-            <input type="submit" value="Delete">
-        </form>
-    </td>
-    <td>
-        <form th:action="@{'/messages/' + ${message.id}}" th:object="${message}" method="put">
-            <input type="submit" value="Replase">
-        </form>
-    </td>
 </tr>
 </tbody>
 </table>
